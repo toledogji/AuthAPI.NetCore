@@ -8,6 +8,5 @@ namespace AuthAPI.Models
 {
     public class Role : IdentityRole<Guid>
     {
-
     }
 }

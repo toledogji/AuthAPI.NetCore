@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AuthAPI.Controllers
 {
@@ -10,7 +7,8 @@ namespace AuthAPI.Controllers
     [Route("[controller]")]
     public class HomeController : ControllerBase
     {
-        private IActionResult Index()
+        [HttpGet("run")]
+        public async Task<IActionResult> Run()
         {
             return Ok("API running");
         }
