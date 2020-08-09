@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthAPI", "AuthAPI\AuthAPI.csproj", "{B4D4373D-7D34-4154-BB04-F0E05B190B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PertixCore.Api", "PertixCore.Api\PertixCore.Api.csproj", "{AE03C4C1-1AE5-46DD-9034-3DADCA2EB612}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PertixCore.Core", "PertixCore.Core\PertixCore.Core.csproj", "{616E3F33-243A-45D4-94B0-2D3C24BCECC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PertixCore.Data", "PertixCore.Data\PertixCore.Data.csproj", "{F8ACCA6D-F272-431D-AB60-7308EA09D59D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PertixCore.Services", "PertixCore.Services\PertixCore.Services.csproj", "{33CD7553-20FC-4ABB-B011-EDE423DBE009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4D4373D-7D34-4154-BB04-F0E05B190B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4D4373D-7D34-4154-BB04-F0E05B190B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4D4373D-7D34-4154-BB04-F0E05B190B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D4373D-7D34-4154-BB04-F0E05B190B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE03C4C1-1AE5-46DD-9034-3DADCA2EB612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE03C4C1-1AE5-46DD-9034-3DADCA2EB612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE03C4C1-1AE5-46DD-9034-3DADCA2EB612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE03C4C1-1AE5-46DD-9034-3DADCA2EB612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616E3F33-243A-45D4-94B0-2D3C24BCECC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616E3F33-243A-45D4-94B0-2D3C24BCECC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616E3F33-243A-45D4-94B0-2D3C24BCECC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616E3F33-243A-45D4-94B0-2D3C24BCECC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8ACCA6D-F272-431D-AB60-7308EA09D59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8ACCA6D-F272-431D-AB60-7308EA09D59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8ACCA6D-F272-431D-AB60-7308EA09D59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8ACCA6D-F272-431D-AB60-7308EA09D59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33CD7553-20FC-4ABB-B011-EDE423DBE009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33CD7553-20FC-4ABB-B011-EDE423DBE009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33CD7553-20FC-4ABB-B011-EDE423DBE009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33CD7553-20FC-4ABB-B011-EDE423DBE009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
