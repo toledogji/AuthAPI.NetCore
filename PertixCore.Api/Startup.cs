@@ -43,6 +43,8 @@ namespace PertixCore
 
             services.AddControllers();
 
+            services.AddCors();
+
             services.AddDbContext<AuthDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PertixCoreDB")));
             services.AddAutoMapper(typeof(Startup));
             services.AddIdentity<User, Role>( options => {
@@ -84,15 +86,16 @@ namespace PertixCore
 
             app.UseSwag();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+            
         }
 
         private void ConfigureAuth(IApplicationBuilder app)

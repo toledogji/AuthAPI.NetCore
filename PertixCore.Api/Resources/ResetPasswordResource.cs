@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PertixCore.Api.Resources
 {
@@ -10,11 +6,11 @@ namespace PertixCore.Api.Resources
     {
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
+        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        public string NewPasswordConfirmation { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
     }

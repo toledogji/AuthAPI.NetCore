@@ -81,7 +81,7 @@ namespace PertixCore.Controllers
         {
             var user = _userManager.Users.SingleOrDefault(u => u.UserName == userLoginResource.Email);
             if (user is null)
-                return NotFound("User not found");
+                return NotFound(new { message = "User not found." });
 
             var userSigninResult = await _signInManager.PasswordSignInAsync(user, userLoginResource.Password, false, false);
 
@@ -102,12 +102,12 @@ namespace PertixCore.Controllers
 
             var userIsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
             if(!userIsEmailConfirmed)
-                return BadRequest("Email is not confirmed.");
+                return BadRequest(new { message = "Email is not confirmed." });
 
-            return BadRequest("Email or password incorrect.");
+            return BadRequest(new { message = "Email or password is incorrect." });
         }
 
-        [HttpPost("user/forgotPassword")]
+        [HttpPost("forgotPassword")]
         [AllowAnonymous]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordResource forgotPasswordResource)
         {
@@ -130,7 +130,7 @@ namespace PertixCore.Controllers
             });
         }
 
-        [HttpPost("user/resetPassword")]
+        [HttpPost("resetPassword")]
         [AllowAnonymous]
         public async Task<IActionResult> ResetPassword(ResetPasswordResource resetPasswordResourcel)
         {
@@ -138,13 +138,13 @@ namespace PertixCore.Controllers
             if (user == null)
                 return BadRequest("Error");
 
-            var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordResourcel.Token, resetPasswordResourcel.Password);
+            var resetPassResult = await _userManager.ResetPasswordAsync(user, resetPasswordResourcel.Token, resetPasswordResourcel.NewPassword);
             if (resetPassResult.Succeeded)
             {
-                return Ok("Password has been reset.");
+                return Ok(new { message = "Password has been reset" });
             }
 
-            return BadRequest("Email or password incorrect.");
+            return BadRequest("Incorrect email or token");
         }
 
         [HttpPost("createRole")]
@@ -191,7 +191,7 @@ namespace PertixCore.Controllers
         {
             await _signInManager.SignOutAsync();
 
-            return Ok("User logged out successful.");
+            return Ok(new { message = "User logged out" });
         }
     }
 }
