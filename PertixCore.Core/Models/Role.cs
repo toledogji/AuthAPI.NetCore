@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AuthAPI.Models
+namespace PertixCore.Core.Models
 {
     public class Role : IdentityRole<Guid>
     {

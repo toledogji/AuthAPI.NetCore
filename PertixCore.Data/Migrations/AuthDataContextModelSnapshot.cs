@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PertixCore.Helpers;
 
-namespace AuthAPI.Migrations
+namespace PertixCore.Migrations
 {
     [DbContext(typeof(AuthDataContext))]
     partial class AuthDataContextModelSnapshot : ModelSnapshot

@@ -1,5 +1,5 @@
 ﻿
-namespace AuthAPI.Settings
+namespace PertixCore.Core.Settings
 {
     public class JwtSettings
     {

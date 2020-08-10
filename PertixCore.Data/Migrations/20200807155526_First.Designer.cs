@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PertixCore.Helpers;
 
-namespace AuthAPI.Migrations
+namespace PertixCore.Migrations
 {
     [DbContext(typeof(AuthDataContext))]
     [Migration("20200807155526_First")]

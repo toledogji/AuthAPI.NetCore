@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AuthAPI.Migrations
+namespace PertixCore.Migrations
 {
     public partial class First : Migration
     {

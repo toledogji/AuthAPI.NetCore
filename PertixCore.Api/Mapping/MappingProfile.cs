@@ -1,8 +1,8 @@
-﻿using AuthAPI.Models;
-using AuthAPI.Resources;
+﻿using PertixCore.Resources;
 using AutoMapper;
+using PertixCore.Core.Models;
 
-namespace MyMusic.Api.Mapping
+namespace PertixCore.Api.Mapping
 {
     public class MappingProfile : Profile
     {

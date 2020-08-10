@@ -1,10 +1,10 @@
-﻿using AuthAPI.Settings;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using PertixCore.Core.Settings;
 using System.Collections.Generic;
 
-namespace AuthAPI.Extensions
+namespace PertixCore.Api
 {
     public static class SwaggerExtensions
     {

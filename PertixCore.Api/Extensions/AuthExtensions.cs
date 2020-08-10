@@ -1,12 +1,12 @@
-﻿using AuthAPI.Settings;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using PertixCore.Core.Settings;
 using System;
 using System.Text;
 
-namespace AuthAPI.Extensions
+namespace PertixCore.Api.Extensions
 {
     public static class AuthExtensions
     {
